@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.menu div {
+    display: inline-block;
+}
+
+.MenuButton {
+    width: 50px;
+    height: 85px;
+    text-align: center;
+    position: relative;
+    bottom: 80px;
+}
+
+.TableMenu {
+    width: 150px;
+    height: 200px;
+    border: 1px solid grey;
+    overflow: scroll;
+    overflow-x: hidden;
+    cursor: pointer;
+}
+
+.TableMenu p {
+    padding: 5px;
+    margin: 5px;
+}
