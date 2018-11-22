@@ -9,7 +9,7 @@ listOption.onclick = function(event) {
     test_id = 1;
 };
 
-function movingTables() {
+function moveOne() {
     //Проверка на нажатие кнопок
     if (test_id === 0) {
         alert('Элемент не выбран');
@@ -45,10 +45,10 @@ listButton.onclick = function(event) {
         moveAll();
     } else if (target.id === 'button_2') {
         parentElemGlobal = document.getElementById('TableMenuSelected');
-        movingTables();
+        moveOne();
     } else if (target.id === 'button_3') {
         parentElemGlobal = document.getElementById('TableMenuAvailable');
-        movingTables();
+        moveOne();
     } else if (target.id === 'button_4') {
         parentElem = document.getElementById('TableMenuSelected');
         parentElemButton = document.getElementById('TableMenuAvailable');
