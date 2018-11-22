@@ -22,18 +22,9 @@ function movingTables() {
     test_id = 0;
 }
 
-function moveAllTablesGoSelected() {
-    for (var i = 0; i < 5; i++) {
-        elemGlobal = document.querySelector('p');
-        elemGlobal.style.backgroundColor = 'transparent';
-        parentElemButton.appendChild(elemGlobal);
-    }
-}
-
-function moveAllTablesGoAvailable() {
-    var parent_table = document.getElementById('TableMenuSelected');
-    for (var i = 0; i < 5; i++) {
-        elemGlobal = parent_table.querySelector('p');
+function moveAll() {
+    for (var i = 0; i = parentElem.childNodes.length; i++) {
+        elemGlobal = parentElem.querySelector('p');
         if (elemGlobal === null) {
             return;
         }
@@ -49,8 +40,9 @@ listButton.onclick = function(event) {
     if (target.tagName != 'BUTTON') return;
 
     if (target.id === 'button_1') {
+        parentElem = document.getElementById('TableMenuAvailable');
         parentElemButton = document.getElementById('TableMenuSelected');
-        moveAllTablesGoSelected();
+        moveAll();
     } else if (target.id === 'button_2') {
         parentElemGlobal = document.getElementById('TableMenuSelected');
         movingTables();
@@ -58,7 +50,8 @@ listButton.onclick = function(event) {
         parentElemGlobal = document.getElementById('TableMenuAvailable');
         movingTables();
     } else if (target.id === 'button_4') {
+        parentElem = document.getElementById('TableMenuSelected');
         parentElemButton = document.getElementById('TableMenuAvailable');
-        moveAllTablesGoAvailable();
+        moveAll();
     }
 }
